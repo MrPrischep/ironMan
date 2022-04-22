@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRON MAN</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/d9a54c0fdb.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="navMenu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script>
+      SmoothScroll({
+          animationTime: 800,
+          stepSize: 75,
+          accelerationDelta: 30,  
+          accelerationMax: 2,   
+          keyboardSupport: true,  
+          arrowScroll: 50,
+          pulseAlgorithm: true,
+          pulseScale: 4,
+          pulseNormalize: 1,
+          touchpadSupport: true,
+      })
+    </script>
+</head>
+<body>
+    <nav>
+       <label class="logo">IRON MAN</label> 
+       <ul>
+            <li class="navElem active">
+               <a href="index.html#about_me" >Who am I?</a>
+            </li>
+            <li class="navElem">
+                <a href="index.html#avengers" >Avengers</a>
+            </li>
+            <li class="navElem">
+                <a href="index.html#films" >Films</a>
+            </li>
+            <li class="navElem">
+                <a href="index.html#costumes" >Costumes</a>
+            </li>
+            <li class="navElem">
+              <a href="index.html#friends" >My Friends</a>
+            </li>
+            <li class="navElem">
+                <a href="index.html#kontakt" >Kontakt</a>
+            </li>
+        </ul>
+        <label id="medium"></label>
+        <ul class="mediumNav">
+          <li class="navElem active" data-title="Who Am I">
+            <a href="index.html#about_me" ><i class="fa-solid fa-circle-info"></i></a>
+          </li>
+          <li class="navElem" data-title="Avengers">
+            <a href="index.html#avengers" ><i class="fa-solid fa-desktop"></i></a>
+          </li>
+          <li class="navElem" data-title="Films">
+            <a href="index.html#films" ><i class="fa-solid fa-square-poll-vertical"></i></a>
+          </li>
+          <li class="navElem" data-title="Costumes">
+            <a href="index.html#costumes" ><i class="fa-solid fa-chalkboard-user"></i></a>
+          </li>
+          <li class="navElem" data-title="My Friends">
+            <a href="index.html#friends" ><i class="fa-brands fa-angellist"></i></a>
+          </li>
+          <li class="navElem" data-title="Kontakt">
+            <a href="index.html#kontakt" ><i class="fa-solid fa-envelope"></i></a>
+          </li>
+        </ul>
+        
+        <label id="icon">
+            <i class="bi bi-list"></i>
+        </label>
+    </nav>
+      <a name="about_me"></a>
+      <div class="about_me" onmouseenter="mouselog(event)">
+        <h1>I Am Iron Man</h1>
+        <hr/>
+        <p>
+          Anthony Edward <strong>"Tony"</strong> Stark is a billionaire industrialist, a founding member of the Avengers, and the former CEO of Stark Industries. 
+          A brush blue brilliant inventor, genius, billionaire, playboy, and philanthropist. I created an armored suit which used to escape my captors. 
+          Upon returning home, I utilized several more armor to us against terrorists. 
+        </p>
+        <p>
+          I am a shield of humanity, one of the members of the team <strong>Avengers</strong>.
+        </p>
+      </div>
+      
+      <a name="avengers"></a>
+      <div class="avengers" onmouseenter="mouselog(event)">
+        <div class="sidebar">
+          <div style="background: linear-gradient(220.16deg, #435cad -8%, #0d4608 100%);">
+            <h1>Hulk</h1>
+            <h2><a href="https://marvelcinematicuniverse.fandom.com/wiki/Hulk" target="_blank">Robert Bruce Banner</a></h2>
+          </div>
+          <div style="background: linear-gradient(220deg, #161515 -1%, #4b0303 100%);">
+            <h1>Thor</h1>
+            <h2><a href="https://marvelcinematicuniverse.fandom.com/wiki/Thor" target="_blank">Thor Odinson</a></h2>
+          </div>
+          <div style="background: linear-gradient(180deg, #02022c 1%, #814f05 128%);">
+            <h1>Iron Man</h1>
+            <h2><a href="https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man" target="_blank">Anthony Edward "Tony" Stark</a></h2>
+          </div>
+          <div style="background: linear-gradient(215.32deg, rgb(143, 6, 6) 10%, #010241 120%);">
+            <h1>Black Widow</h1>
+            <h2><a href="https://marvelcinematicuniverse.fandom.com/wiki/Black_Widow" target="_blank">Natalia "Natasha" Romanoff</a></h2>
+          </div>
+          <div style="background: linear-gradient(229.99deg, #010241 20%, red 120%);">
+            <h1>Captain America</h1>
+            <h2><a href="https://marvelcinematicuniverse.fandom.com/wiki/Steve_Rogers" target="_blank">Steven Grant "Steve" Rogers</a></h2>
+          </div>
+        </div>
+        <div class="main-slide">
+          <div
+            style="background-image: url('https://u.kanobu.ru/editor/images/94/479289e6-f2f0-4661-8b58-1f60e879ddfa.jpg')"
+          ></div>
+          <div
+            style="background-image: url('https://images3.alphacoders.com/110/1108879.jpg')"
+          ></div>
+          <div
+            style="background-image: url('https://1gr.cz/fotky/bulvar/20/043/r7/MAA8303bb_IronMan_nejlepmomenty.jpg')"
+          ></div>
+          <div
+            style="background-image: url('https://www.fandimefilmu.cz/files/images/Filmy/Thor_2/Thor_2_7.jpg')"
+          ></div>
+          <div
+            style="background-image: url('https://c3.primacdn.cz/sites/default/files/styles/landscape_extra_large/public/97f60f1a/3622754-huhh.jpg?itok=2nsDU0IX&c=def_cloudinary')"
+          ></div>
+        </div>
+        <div class="controls">
+          <button class="down-button">
+            <i class="fas fa-arrow-down"></i>
+          </button>
+          <button class="up-button">
+            <i class="fas fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+
+      <a name="films"></a>
+      <div class="films" onmouseenter="mouselog(event)">
+        <h1>Films</h1>
+        <hr/>
+        <table class="table">
+          <thead>
+              <tr>
+                  <th rowspan="2">
+                      Film 
+                  </th>
+                  <th colspan="3">Money (million $)</th>
+              </tr>
+              <tr>
+                  <td>Budget</td>
+                  <td>Box office</td>
+                  <td>Year</td>
+                  
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Iron Man</td>
+                  <td>140</td>
+                  <td>585.8</td>
+                  <td>2008</td>
+              </tr>
+              <tr>
+                  <td>Iron Man 2</td>
+                  <td>200</td>
+                  <td>623.4</td>
+                  <td>2010</td>
+              </tr>
+              <tr>
+                <td>Iron Man 3</td>
+                <td>200</td>
+                <td>1214.8</td>
+                <td>2013</td>
+            </tr>
+          </tbody>
+      </table>
+      </div>
+
+      <a name="costumes"></a>
+      <div class="practice" onmouseenter="mouselog(event)">
+          <div class="prac_head">
+            <h1>Costumes</h1>
+            <hr/>
+          </div>
+          <div class="costumes">
+          <div
+              class="slide active"
+              style="background-image: url('https://media.sketchfab.com/models/57b18282c1a84c5899fcc7f67762a386/thumbnails/256649c3628f4a27ba26b4f28f6f5d6d/a3a7c33dabb64747953debf50e283685.jpeg')"
+          >
+            <h3>Mark I</h3>
+          </div>
+          <div
+              class="slide"
+              style="background-image: url('https://www.sideshow.com/wp/wp-content/uploads/2014/11/500266-product-feature.jpg')"
+          >
+            <h3>Mark II</h3>
+          </div>
+          <div
+              class="slide"
+              style="background-image: url('https://bleedingcool.com/wp-content/uploads/2020/06/Birth-of-Iron-Man-MK3-SH-Figuarts-002-1200x900.jpg')"
+          >
+            <h3>Mark III</h3>
+          </div>
+          <div
+              class="slide"
+              style="background-image: url('https://i.ytimg.com/vi/ZVRhrRez6Bs/maxresdefault.jpg')"
+          >
+            <h3>Mark V</h3>
+          </div>
+          <div
+              class="slide"
+              style="background-image: url('https://www.sideshow.com/storage/product-images/902767/iron-man-mark-xlii-deluxe-version_marvel_feature.jpg')"
+          >
+            <h3>Mark XLII</h3>
+          </div>
+          <div
+              class="slide"
+              style="background-image: url('https://static2.srcdn.com/wordpress/wp-content/uploads/2019/03/Iron-Man-Avengers-Endgame-Mark-LXXXV-Hot-Toys-1.jpg')"
+          >
+            <h3>Mark LXXXV</h3>
+          </div>
+        </div>
+      </div>
+
+      <a name="friends"></a>
+      <div class="friends" onmouseenter="mouselog(event)">
+        <div class="souv_head">
+          <h1>My Friends</h1>
+          <hr/>
+        </div>
+        <div class="souv_cards">
+            <div class="card">
+              <a href="https://marvelcinematicuniverse.fandom.com/wiki/Pepper_Potts" target="_blank">
+                <div class="card-image pred-1"></div>
+                <h2>Pepper Potts</h2>
+              </a>
+            </div>
+            <div class="card">
+              <a href="https://www.fit.vut.cz/study/course/PIS/.cs" target="_blank">
+                <div class="card-image pred-2"></div>
+                <h2>J.A.R.V.I.S.</h2>
+              </a>
+            </div>
+            <div class="card">
+              <a href="https://marvelcinematicuniverse.fandom.com/wiki/Happy_Hogan" target="_blank">
+                <div class="card-image pred-3"></div>
+                <h2>Happy Hogan</h2>
+              </a>
+            </div>
+        </div>
+      </div>
+
+      <a name="kontakt"></a>
+      <div class="footer" onmouseenter="mouselog(event)">
+        <div class="kont_head">
+          <h1>Contacts</h1>
+          <hr/>
+        </div>
+        <div class="kontakty">
+          <ul>
+            <li>
+              <a href="">
+                <i class="fa-solid fa-user-secret"></i>
+              </a>
+              <div>
+                <p>Iron Man</p>
+                <p>Lorem ipsum dolor</p>
+              </div>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-solid fa-user-astronaut"></i>
+              </a>
+              <div>
+                <p>Avengers</p>
+                <p>Lorem ipsum dolor</p>
+              </div>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-solid fa-user-ninja"></i>
+              </a>
+              <div>
+                <p>Happy Hogan</p>
+                <p>Lorem ipsum dolor</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --mainColor: #4b0908;
+    --secondColor: #b97d10;
+    --activeColor: #fbca03;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: montserrat;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    background: var(--mainColor);
+    position: fixed;
+    z-index: 200;
+    border: 1px solid var(--secondColor);
+}
+
+label.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--secondColor);
+    padding: 0 100px;
+    line-height: 80px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 40px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+
+nav .navElem a {
+    color: var(--secondColor);
+    font-size: 16px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding:  7px 10px;
+    border-radius: 3px;
+    transition: 1s;
+}
+
+nav .navElem.active a {
+    border: 1px solid var(--activeColor);
+    color: var(--activeColor);
+    transition:  .5s;
+}
+
+nav a:hover {
+    border: 1px solid var(--activeColor);
+    transition:  1s;
+}
+
+nav .mediumNav {
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+nav #icon {
+    color: var(--secondColor);
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.about_me {
+    padding: 120px 40px 40px 40px;
+    display: block;
+    text-align: center;   
+    background: var(--secondColor); 
+}
+
+.about_me h1, .films h1 {
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+.about_me p {
+    padding: 40px 200px 0px 200px;
+    font-size: 20px;
+}
+
+hr {
+    border: 2px solid var(--mainColor);
+}
+
+.films {
+    display: block;
+    text-align: center;
+    padding: 40px;
+}
+
+.table {
+    margin: auto;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    max-width: 900px;
+    border: 2px solid var(--mainColor);
+    padding: 15px;
+    overflow: auto;
+    border-radius: 7px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.table > thead {
+    background-color: var(--mainColor);
+    color: var(--secondColor);
+    font-weight: 900;
+}
+
+.table > thead th, .table > thead td {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.table > tbody {
+    font-weight: 500;
+}
+
+.table > tbody td {
+    padding: 10px;
+    border-top: 1px solid var(--mainColor);
+    border-bottom: 1px solid var(--mainColor);   
+}
+
+.table > tbody td:nth-child(1) {
+    background: rgb(201, 201, 201);
+    border: 1px solid var(--mainColor);
+    border-radius: 5px;
+}
+
+.avengers {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+  
+.sidebar {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+  
+.sidebar > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+  
+.sidebar h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    cursor: default;
+}
+
+.sidebar h2 {
+    display: flex;
+    text-align: center;
+    padding: 0 40px;
+}
+
+.sidebar a {
+    border: 1px solid transparent;
+    color: var(--secondColor);
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    padding:  7px 10px;
+
+}
+
+.sidebar a:hover {
+    color: var(--activeColor);
+    border-color: var(--activeColor);
+    transition:  .5s;
+    padding:  7px 10px;
+    border-radius: 3px;
+}
+  
+.main-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform 0.5s ease-in-out;
+}
+  
+.main-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+  
+button {
+    background-color: #fff;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+}
+  
+button:hover {
+    color: var(--mainColor);
+}
+  
+button:focus {
+    outline: none;
+}
+  
+.avengers .controls button {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+}
+  
+.avengers .controls .down-button {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+  
+.avengers .controls .up-button {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.practice {
+    background: rgb(238, 238, 238);
+}
+
+.prac_head {
+    text-align: center;
+    padding: 40px;
+}
+
+.prac_head h1 {
+    padding-bottom: 5px;
+}
+
+.costumes {
+    width: 100%;
+    display: flex;
+    padding-bottom: 40px;
+    background: rgb(238, 238, 238);
+} 
+  
+.slide {
+    height: 50vh;
+    border-radius: 20px;
+    margin: 10px;
+    cursor: pointer;
+    color: #fff;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+
+.slide h3 {
+    position: absolute;
+    font-size: 24px;
+    bottom: 30px;
+    left: 30px;
+    margin: 0; 
+    opacity: 0;
+}
+
+.slide p {
+    position: absolute;
+    font-size: 16px;
+    bottom: 25px;
+    left: 30px;
+    font-weight: 600;
+    margin: 0; 
+    opacity: 0;
+}
+
+.slide a {
+    color: var(--secondColor);
+}
+
+.slide a:hover {
+    color: var(--activeColor);
+}
+  
+.slide.active {
+    flex: 5;
+}
+  
+.slide.active h3, .slide.active p {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.friends {
+    display: block;
+    padding: 40px;
+    padding-bottom: 50px;
+}
+
+.friends h1 {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.souv_cards {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: var(--mainColor);
+    color: var(--secondColor);
+    width: 270px;
+    height: 270px;
+    margin: 40px;
+    margin-bottom: 0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 15) 0px 10px 20px;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: var(--mainColor) 0px 10px 20px;
+}
+
+.card-image {
+    height: 170px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    display: flex;
+    height: 60px;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card a {
+    color: var(--secondColor);
+}
+
+.card:hover a {
+    color: var(--activeColor);
+}
+
+.pred-1 {
+    background: url(https://www.looper.com/img/gallery/why-pepper-potts-will-be-more-important-than-you-think-in-endgame/intro-1552915184.jpg);
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.pred-2 {
+    background: url(https://unshavedmouse.files.wordpress.com/2017/04/jarvis-e1492257077215.png?w=584);
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.pred-3 {
+    background: url(https://www.slashfilm.com/img/gallery/iron-man-3-almost-killed-off-jon-favreaus-happy-hogan/intro-1640048928.jpg);
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.footer {
+    display: block;
+    padding: 40px;
+    background: var(--mainColor);
+    color: var(--secondColor);
+}
+
+.footer h1 {
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.kontakty ul {
+    display: flex;
+    padding: 40px;
+    background: var(--mainColor);
+    text-align: center;
+    justify-content: space-around;
+}
+
+.kontakty ul li {
+    display: flex;
+}
+
+.kontakty ul li i {
+    position: relative;
+    display: block;
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+    line-height: 60px;
+    color: var(--secondColor);
+    background-color: #5e0a09;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 15px;
+}
+
+.kontakty ul li p {
+    display: block;
+    font-size: 30px;  
+    text-align: left;
+    margin: auto;
+    transition: 1s;
+}
+
+.kontakty ul li p:nth-child(2) {
+    font-size: 18px;
+}
+
+.kontakty ul li i:hover {
+    color: var(--activeColor);
+    box-shadow: 0 0 15px var(--activeColor);
+    text-shadow: 0 0 15px var(--activeColor);
+}
+
+@media (max-width: 1199px) {
+    nav .mediumNav {
+        display: block;
+    }
+
+    nav .mediumNav i {
+        font-size: 18px;
+        position: relative;
+    }
+    
+    nav .mediumNav .navElem a{
+        padding: 9px 12px;
+    }
+    
+    nav .mediumNav .navElem:hover::after {
+        display: flex;
+        content: attr(data-title);
+        background: #444649;
+        position: absolute;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        top: 70px;
+        margin-left: 20px;
+        font-size: 14px;
+        font-weight: 800;    
+        height: 30px;
+        padding: 0 10px;
+        border-radius: 10px;  
+        color: var(--secondColor);
+    }
+
+    nav .mediumNav .navElem.active:hover::after {
+        color: var(--secondColor);
+    }
+
+    nav ul:nth-child(2) {
+        display: none;
+    }
+
+    nav ul {
+        margin-right: 20px;
+    }
+
+    nav li {
+        margin: 0 20px;
+    }
+    
+    .about_me {
+        padding: 110px 20px 30px 20px;
+    }
+
+    .about_me h1 {
+        font-size: 28px;
+    }
+
+    .about_me p {
+        padding: 30px 60px 0px 60px;
+        font-size: 18px;
+    }
+
+    .sidebar h1 {
+        font-size: 30px;
+    }
+
+    .sidebar h2 {
+        display: flex;
+        text-align: center;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+
+    .table {
+        margin-top: 30px;
+        font-size: 14px;
+    }
+
+    .prac_head {
+        padding: 30px;
+    }
+
+    .slide {
+        height: 40vh;
+    }
+
+    .slide h3 {
+        font-size: 20px;
+    }
+
+    .slide p {
+        font-size: 14px;
+    }
+
+    .costumes {
+        padding-bottom: 30px;
+    }
+
+    .friends {
+        padding: 30px 30px 30px 40px;
+    }
+
+    .souv_head h1 {
+        font-size: 30px;        
+    }
+
+    .card {
+        height: 240px;
+        width: 240px;
+    }
+
+    .card-image {
+        height: 140px;
+    }
+
+    .card h2 {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 18px;
+    }
+
+    .footer {
+        padding: 30px;
+    }
+
+    .kont_head h1 {
+        font-size: 30px
+    }
+
+    .kontakty ul {
+        padding: 30px;
+    }
+
+    .kontakty ul li i {
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+        line-height: 50px;
+        margin: 0 15px;
+    }
+    
+    .kontakty ul li p {
+        display: block;
+        font-size: 24px;  
+        text-align: left;
+        margin: auto;
+        transition: 1s;
+    }
+
+    .kontakty ul li p:nth-child(2) {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    nav .mediumNav {
+        display: none;
+    }
+
+    nav ul:nth-child(2) {
+        display: block;
+    }
+
+    nav #icon {
+        display: block;
+    }
+    
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--mainColor);
+        left: -100%;
+        top: 80px;
+        text-align: center;
+        transition: all .5s;
+    }
+    
+    nav li {
+        display: block;
+        padding: 0;
+        line-height: 40px;
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 100%;
+    }
+    
+    nav .navElem a {
+        font-size: 25px;
+        border: none;
+    }
+
+    nav .navElem.active {
+        background-color: var(--secondColor);
+    }
+
+    nav .navElem:hover {
+        background-color: var(--activeColor);
+    }
+
+    nav .navElem:hover a {
+        color: var(--mainColor);
+    }
+
+    nav .navElem.active a {
+        border: none;
+        color: var(--mainColor);
+    }
+    
+    nav a:hover {
+        color: var(--activeColor);
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+    .card {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    label.logo {
+        padding: 0 30px;
+    }
+    .kontakty ul li p {
+        font-size: 14px;  
+    }
+    
+    .kontakty ul li p:nth-child(2) {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .sidebar h1 {
+        font-size: 20px;
+    }
+    
+    .sidebar h2 {
+        font-size: 50px;
+    }
+}
